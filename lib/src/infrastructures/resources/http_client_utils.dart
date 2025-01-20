@@ -37,14 +37,14 @@ class HttpClientUtils {
 
       }
     }
-
-    String _translateException(final String exceptionKey) {
-      const String prefix = 'flutter_sample_app_exceptions';
-      final String key = '$prefix$exceptionKey';
-      return 'Other - $exceptionKey';
-
-      // return _isKnownException(key) ? key.tr : 'Other - $exceptionKey';
-    }
+    //
+    // String _translateException(final String exceptionKey) {
+    //   const String prefix = 'flutter_sample_app_exceptions';
+    //   final String key = '$prefix$exceptionKey';
+    //   return 'Other - $exceptionKey';
+    //
+    //   // return _isKnownException(key) ? key.tr : 'Other - $exceptionKey';
+    // }
 
 // bool _isKnownException(final String exceptionKey) =>
 //     Locales.fa_IR.containsKey(exceptionKey);

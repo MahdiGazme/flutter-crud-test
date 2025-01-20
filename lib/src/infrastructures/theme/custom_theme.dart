@@ -51,7 +51,7 @@ class CustomTheme {
 
   Color get backgroundColor => const Color(0xFFE1E8EA);
 
-  Color get bottomSheetBackgroundColor => const Color(0xFFF4F4F4);
+  Color get surfaceColor => const Color(0xFFF4F4F4);
 
   final String fontFamilyPrimary = 'Yekan-bakh';
   final double borderRadiusRectangle = 2.0;

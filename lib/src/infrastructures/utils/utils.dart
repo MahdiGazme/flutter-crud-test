@@ -70,9 +70,9 @@ class Utils {
 
   Duration get filterDebouncerDuration => Duration(milliseconds: filterDelay);
 
-  final double smallAvatarSize = 42.0;
-  final double mediumAvatarSize = 75.0;
-  final double largeAvatarSize = 104.0;
+  final double smallAvatarSize = 30.0;
+  final double mediumAvatarSize = 64.0;
+  final double largeAvatarSize = 75.0;
 
   final double smallLogoSize = 50.0;
   final double mediumLogoSize = 110.0;

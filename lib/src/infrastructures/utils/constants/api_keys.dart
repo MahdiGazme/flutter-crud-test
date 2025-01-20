@@ -3,14 +3,8 @@ class ApiKeys {
 
   static final shared = ApiKeys._();
 
-  //  ----> authentications <----
-  final String signup = '/register';
-  final String login = '/login';
+  final String allCustomers = '/customers';
 
-//  ----> store vitrine <----
-
-  final String storeItemsList = '/asas';
-  final String storeItem = '/asas';
 
 
 

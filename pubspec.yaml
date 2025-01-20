@@ -1,6 +1,7 @@
 name: flutter_crud_test
 description: "A simple CRUD app with flutter"
 version: 0.0.1
+publish_to: none
 
 environment:
   sdk: ^3.5.4

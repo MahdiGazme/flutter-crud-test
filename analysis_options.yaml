@@ -19,7 +19,6 @@ analyzer:
     inference_failure_on_instance_creation: error
     inference_failure_on_uninitialized_variable: error
     inference_failure_on_untyped_parameter: error
-    invalid_factory_annotation: error
     invalid_factory_method_impl: error
     invalid_literal_annotation: error
     invalid_override_of_non_virtual_member: error

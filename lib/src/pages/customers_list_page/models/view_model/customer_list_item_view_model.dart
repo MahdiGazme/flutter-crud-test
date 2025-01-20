@@ -1,19 +1,19 @@
 class CustomerListItemViewModel {
+  final String id;
   final String firstName;
   final String lastName;
-  final DateTime birthDate;
 
   CustomerListItemViewModel({
+    required this.id,
     required this.firstName,
     required this.lastName,
-    required this.birthDate,
   });
 
   factory CustomerListItemViewModel.fromJason(
           final Map<String, dynamic> json) =>
       CustomerListItemViewModel(
+        id: json['id'],
         firstName: json['firstName'],
         lastName: json['lastName'],
-        birthDate: json['birthDate'],
       );
 }
