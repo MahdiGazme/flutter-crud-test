@@ -1,12 +1,15 @@
 import 'package:get/get.dart';
 
+import '../../../infrastructures/app_control/data_passing_service.dart';
 import '../../../infrastructures/router/route_names.dart';
 import '../../../shared/enums/page_state_enum.dart';
 import '../models/view_model/customer_list_item_view_model.dart';
 import '../repository/customers_list_repository.dart';
 
 class CustomersListController extends GetxController {
-  final _repository = CustomersListRepository();
+  late final CustomersListRepository _repository;
+
+  CustomersListController(this._repository);
 
   final state = PageStateEnum.loading.obs;
 
@@ -42,25 +45,27 @@ class CustomersListController extends GetxController {
   }
 
   Future<void> onCustomerTap(final String id) async {
-    //TODO: change the route after page is created
-    final result =
-        await Get.toNamed(RouteNames.shared.customerProfile, parameters: {
-      'id': id,
+    await Get.toNamed(RouteNames.shared.customerInformation, parameters: {
+      ':id': id,
     });
 
-    // in-case a new customer added the list will be refresh
-    if (result != null && result == true) {
+    final dataPassService = DataPassingService();
+
+    final result = dataPassService.getData;
+    // in-case if customer data has been edited or deleted, list will refresh
+    if (result) {
       await _onRefresh();
+      // its necessarily to set the data to false for future uses
+      dataPassService.setData = false;
     }
   }
 
   Future<void> onAddCustomerButtonTap() async {
-    //TODO: change the route after page is created
     final result = await Get.toNamed(
       RouteNames.shared.customerAddForm,
     );
 
-    // in-case if customer data has been edited or deleted, list will refresh
+    // in-case a new customer added the list will be refresh
     if (result != null && result == true) {
       await _onRefresh();
     }

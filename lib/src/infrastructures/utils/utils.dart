@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class Utils {
   Utils._();
@@ -71,8 +72,8 @@ class Utils {
   Duration get filterDebouncerDuration => Duration(milliseconds: filterDelay);
 
   final double smallAvatarSize = 30.0;
-  final double mediumAvatarSize = 64.0;
-  final double largeAvatarSize = 75.0;
+  final double mediumAvatarSize = 35.0;
+  final double largeAvatarSize = 45.0;
 
   final double smallLogoSize = 50.0;
   final double mediumLogoSize = 110.0;
@@ -128,6 +129,9 @@ class Utils {
 
     return null;
   }
+
+  String formatDateTime(final DateTime date) =>
+      DateFormat('MM/dd/yyyy').format(date);
 
   String removeDigitSeparator({
     required final String separator,

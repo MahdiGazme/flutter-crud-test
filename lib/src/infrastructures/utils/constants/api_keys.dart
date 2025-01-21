@@ -5,7 +5,5 @@ class ApiKeys {
 
   final String allCustomers = '/customers';
 
-
-
-
+  String customer(final String id) => '/customers/$id';
 }

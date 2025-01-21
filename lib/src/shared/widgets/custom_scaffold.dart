@@ -23,15 +23,11 @@ class CustomScaffold extends StatelessWidget {
         body: _body(),
       );
 
-  Widget _body() => Align(
-        child: LayoutBuilder(
-          builder: (final context, final constraints) =>
-              _bodyFrame(constraints),
-        ),
+  Widget _body() => LayoutBuilder(
+        builder: (final context, final constraints) => _bodyFrame(constraints),
       );
 
   Widget _bodyFrame(final BoxConstraints constraints) => SizedBox(
-        height: constraints.maxHeight,
         width: constraints.maxWidth < Utils.shared.defaultResponsiveMaxWidth
             ? constraints.maxWidth
             : Utils.shared.defaultResponsiveMaxWidth,

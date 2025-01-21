@@ -8,78 +8,48 @@ class CustomTextStyle {
   static TextTheme get getStyle => TextTheme(
         displayLarge: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 30,
-          fontWeight: FontWeight.w900,
         ),
         displayMedium: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 24,
-          fontWeight: FontWeight.w900,
         ),
         displaySmall: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 20,
-          fontWeight: FontWeight.w900,
         ),
         headlineLarge: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 20,
-          fontWeight: FontWeight.w900,
         ),
         headlineMedium: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 18,
-          fontWeight: FontWeight.w900,
         ),
         headlineSmall: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 16,
-          fontWeight: FontWeight.w900,
         ),
         titleLarge: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
         ),
         titleMedium: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
         ),
         titleSmall: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 16,
-          fontWeight: FontWeight.w700,
         ),
         labelLarge: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 22,
-          fontWeight: FontWeight.w700,
         ),
         labelMedium: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 20,
-          fontWeight: FontWeight.w700,
         ),
         labelSmall: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
         ),
         bodyLarge: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 18,
-          fontWeight: FontWeight.w400,
         ),
         bodyMedium: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 16,
-          fontWeight: FontWeight.w400,
         ),
         bodySmall: TextStyle(
           color: CustomTheme.shared.textColor,
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
         ),
       );
 }
