@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 import 'package:milky_http_client/milky_http_client.dart';
 
 import '../parameters/flutter_crud_test_parameters.dart';
@@ -18,7 +19,7 @@ class HttpClientUtils {
         baseUrl: baseUrl ?? FlutterCrudTestParameters.shared.baseUrl,
         headers: headers,
         handleExceptionCallBack: (final exception) =>
-           _handleException(exception, showError: showError),
+            _handleException(exception, showError: showError),
         sendTimeout: Utils.shared.defaultTimeOutDuration,
         connectTimeout: Utils.shared.defaultTimeOutDuration,
         receiveTimeout: Utils.shared.defaultTimeOutDuration,
@@ -33,20 +34,18 @@ class HttpClientUtils {
       return;
     }
 
-      if (showError) {
-
-      }
+    if (showError) {
+      Get.snackbar(
+        'Error',
+        _translateException(exceptionKey),
+      );
     }
-    //
-    // String _translateException(final String exceptionKey) {
-    //   const String prefix = 'flutter_sample_app_exceptions';
-    //   final String key = '$prefix$exceptionKey';
-    //   return 'Other - $exceptionKey';
-    //
-    //   // return _isKnownException(key) ? key.tr : 'Other - $exceptionKey';
-    // }
+  }
 
-// bool _isKnownException(final String exceptionKey) =>
-//     Locales.fa_IR.containsKey(exceptionKey);
-//   }
+  String _translateException(final String exceptionKey) {
+    const String prefix = 'flutter_sample_app_exceptions';
+    final String key = '$prefix $exceptionKey';
+
+    return key;
+  }
 }

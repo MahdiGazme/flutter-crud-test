@@ -122,14 +122,6 @@ class Utils {
     return str;
   }
 
-  String? regularValidator(final String value) {
-    if (value.isEmpty) {
-      return 'This field can not be empty';
-    }
-
-    return null;
-  }
-
   String formatDateTime(final DateTime date) =>
       DateFormat('MM/dd/yyyy').format(date);
 

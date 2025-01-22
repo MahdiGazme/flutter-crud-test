@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'custom_theme.dart';
 import 'styles/custom_app_bar_style.dart';
 import 'styles/custom_card_style.dart';
+import 'styles/custom_text_field_style.dart';
 
 class CustomThemeData {
   CustomThemeData._();
@@ -17,6 +18,7 @@ class CustomThemeData {
         ),
         cardTheme: CustomCardStyle.getStyle,
         appBarTheme: CustomAppbarStyle.getStyle,
+        inputDecorationTheme: CustomTextFieldStyle.getStyle,
         fontFamily: CustomTheme.shared.fontFamilyPrimary,
       );
 }

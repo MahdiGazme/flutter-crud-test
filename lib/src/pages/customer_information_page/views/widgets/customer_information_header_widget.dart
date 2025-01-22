@@ -35,14 +35,14 @@ class CustomerInformationHeaderWidget
       );
 
   Widget _phoneNumber(final BuildContext context) => Text(
-        controller.customer.phoneNumber,
+        controller.customer!.phoneNumber,
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
               color: CustomTheme.shared.textColor.shade400,
             ),
       );
 
   Widget _name(final BuildContext context) => Text(
-        '${controller.customer.firstName} ${controller.customer.lastName}',
+        '${controller.customer!.firstName} ${controller.customer!.lastName}',
         style: Theme.of(context).textTheme.titleMedium,
       );
 

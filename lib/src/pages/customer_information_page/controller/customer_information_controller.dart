@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import '../../../infrastructures/app_control/data_passing_service.dart';
 import '../../../infrastructures/router/route_names.dart';
 import '../../../shared/enums/page_state_enum.dart';
-import '../models/view_model/customer_view_model.dart';
+import '../../../shared/models/view_model/customer_view_model.dart';
 import '../repository/customer_information_repository.dart';
 
 class CustomerInformationController extends GetxController {
@@ -15,7 +15,7 @@ class CustomerInformationController extends GetxController {
 
   final state = PageStateEnum.loading.obs;
   final isDeleting = false.obs;
-  late final CustomerViewModel customer;
+  CustomerViewModel? customer;
 
   @override
   void onInit() {
@@ -62,14 +62,14 @@ class CustomerInformationController extends GetxController {
     final result = await Get.toNamed(
       RouteNames.shared.customerEditForm,
       parameters: {
-        'id': customerId,
+        ':id': customerId,
       },
     );
 
     if (result is bool && result) {
       await _refreshCustomerData();
 
-      final dataService = Get.find<DataPassingService>();
+      final dataService = DataPassingService();
       dataService.setData = true;
     }
   }

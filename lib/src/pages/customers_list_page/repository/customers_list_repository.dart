@@ -9,7 +9,7 @@ class CustomersListRepository {
 
   Future<Either<String, List<CustomerListItemViewModel>>> getCustomers() async {
     final resultOrException = await _httpClient.get(
-      ApiKeys.shared.allCustomers,
+      ApiKeys.shared.getAllCustomers,
     );
 
     return resultOrException.fold(

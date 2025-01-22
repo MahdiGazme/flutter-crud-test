@@ -48,17 +48,17 @@ class CustomerInformationPage extends GetView<CustomerInformationController> {
       );
 
   Widget _dateOfBirth() => CustomerInformationItemWidget(
-        text: Utils.shared.formatDateTime(controller.customer.dateOfBirth),
+        text: Utils.shared.formatDateTime(controller.customer!.dateOfBirth),
         icon: Icons.calendar_month_rounded,
       );
 
   Widget _email() => CustomerInformationItemWidget(
-        text: controller.customer.email,
+        text: controller.customer!.email,
         icon: Icons.alternate_email_outlined,
       );
 
   Widget _bankAccount() => CustomerInformationItemWidget(
-        text: controller.customer.bankAccountNumber,
+        text: controller.customer!.bankAccountNumber,
         icon: Icons.credit_card,
       );
 }

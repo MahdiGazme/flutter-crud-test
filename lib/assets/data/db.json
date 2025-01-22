@@ -1,13 +1,3 @@
 {
-  "customers": [
-    {
-      "id": "1103",
-      "firstName": "Jane",
-      "lastName": "Smith",
-      "dateOfBirth": "1995-05-15",
-      "phoneNumber": "987654321",
-      "email": "jane.smith@example.com",
-      "bankAccountNumber": "0987654321"
-    }
-  ]
+  "customers": []
 }

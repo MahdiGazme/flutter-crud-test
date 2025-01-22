@@ -7,6 +7,7 @@ void main() async {
   _initUrl(
     Flavor.stage,
   );
+  WidgetsFlutterBinding.ensureInitialized();
 
   runApp(const MyApp());
 }
